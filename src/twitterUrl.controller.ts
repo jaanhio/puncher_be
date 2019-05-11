@@ -6,7 +6,7 @@ export class TwitterUrlController {
   constructor(private readonly twitterUrlService: TwitterUrlService) {}
 
   @Get()
-  getTco(@Query() query): string {
+  getTco(@Query() query) {
     const initialUrl = query.url;
     return this.twitterUrlService.getTcoLink(initialUrl);
   }
